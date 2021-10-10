@@ -50,12 +50,13 @@ public class LogRegChoiseController {
         } else {
             try {
                 dbWorking.pushNewUser(new UserWithSalt(loginTextField.getText(), passwordField.getText(), ""));
+                answerLabel.setText("Пользователь успешно зарегестрирован!");
+                answerLabel.setTextFill(Color.BLUE);
             } catch (SQLException throwables) {
+                throwables.printStackTrace();
                 answerLabel.setText("Проблема при добавлении пользователя!");
                 answerLabel.setTextFill(Color.RED);
             }
-            answerLabel.setText("Пользователь успешно зарегестрирован!");
-            answerLabel.setTextFill(Color.BLUE);
         }
     }
 
