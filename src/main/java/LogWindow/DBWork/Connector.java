@@ -7,9 +7,11 @@ import java.sql.SQLException;
 public class Connector {
     private Connection connection;
 
-    private String url = "jdbc:postgresql://localhost:8999/studs";
-    private String user = "s309681";
-    private String password = "yvr557";
+//    Здесь нужно ввести URL БД и имя пользователя с паролём jdbc:postgresql://localhost:8999/studs
+//    Если Имя пользователя и пароля нет, то поставить вместо строк null
+    private String url = "...";
+    private String user = "...";
+    private String password = "...";
 
     public Connection connect() throws SQLException {
         try {

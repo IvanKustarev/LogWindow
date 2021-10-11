@@ -23,7 +23,7 @@ public class DBWorker implements DBWorking {
         statement.close();
         connection.commit();
     }
-
+    
     @Override
     public UserWithSalt getUser(String name) throws SQLException {
 
